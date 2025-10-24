@@ -224,6 +224,7 @@ const QuizSection = ({ category }) => {
 
     if (currentPage !== 10) {
       updateCurrentPage(currentPage + 1);
+      setTimer(15); // Reset timer for new question
       callingFocus();
       callingBlur();
     }
@@ -287,11 +288,7 @@ const QuizSection = ({ category }) => {
   return (
     <section className="block__section">
       {loaderActive ? (
-        <ClimbingBoxLoader
-          className="loader"
-          type="Oval"
-          color="#ffa500"
-        />
+        <ClimbingBoxLoader className="loader" type="Oval" color="#ffa500" />
       ) : (
         <>
           <h4>CATEGORY: {category.toUpperCase()}</h4>
