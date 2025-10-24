@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
+import Home from './Home/Home';
 // import Home from "./Home/Home";
 // import Quiz from "./QuizPage";
 // import About from './About';
@@ -10,12 +11,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    Home goes here
       <Router>
-        {/* <Route exact path="/" component={Home} />
-        <Route path="/quiz" component={Quiz} /> 
-        <Route path="/about" component={About} />
-        <Route path="/stats" component={Stats} /> */}
+        <Route exact path="/" component={Home} />
+        {/* <Route path="/quiz" component={Quiz} />  */}
+        {/* <Route path="/about" component={About} /> */}
+        {/* <Route path="/stats" component={Stats} /> */}
       </Router>
     </div>
   );

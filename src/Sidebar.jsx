@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-import FocusTrap from "focus-trap-react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 
@@ -23,68 +22,62 @@ function Sidebar({ isOpen, onClose }) {
   };
 
   return (
-    <FocusTrap active={isOpen} paused={!isOpen}>
-      <div onKeyDown={onKeyDown}>
-        {isOpen && (
-          <label onClick={onClose} className="Sidebar__mask">
-            <button
-              aria-label="Close menu"
-              className="Sidebar__mask-button"
-            ></button>
-          </label>
-        )}
-        <div
-          className={className}
-          role="dialog"
-          ref={sidebarRef}
-          tabIndex="0"
-          aria-label="sidebar menu"
-        >
-          <ul className="Sidebar__menu">
-            <li className="Sidebar__menu-item">
-              <Link
-                to="/"
-                className="Sidebar__menu-link"
-                aria-label="Go to home"
+    <div onKeyDown={onKeyDown}>
+      {isOpen && (
+        <label onClick={onClose} className="Sidebar__mask">
+          <button
+            aria-label="Close menu"
+            className="Sidebar__mask-button"
+          ></button>
+        </label>
+      )}
+      <div
+        className={className}
+        role="dialog"
+        ref={sidebarRef}
+        tabIndex="0"
+        aria-label="sidebar menu"
+      >
+        <ul className="Sidebar__menu">
+          <li className="Sidebar__menu-item">
+            <Link to="/" className="Sidebar__menu-link" aria-label="Go to home">
+              Home
+              <i
+                className="material-icons"
+                style={{
+                  position: "absolute",
+                  top: "12px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
               >
-                Home
-                <i
-                  className="material-icons"
-                  style={{
-                    position: "absolute",
-                    top: "12px",
-                    marginLeft: "20px",
-                    marginRight: "20px",
-                  }}
-                >
-                  home
-                </i>
-              </Link>
-            </li>
-            <li className="Sidebar__menu-item">
-              <Link
-                to="/stats"
-                className="Sidebar__menu-link"
-                aria-label="Go to game stats"
+                home
+              </i>
+            </Link>
+          </li>
+          <li className="Sidebar__menu-item">
+            <Link
+              to="/stats"
+              className="Sidebar__menu-link"
+              aria-label="Go to game stats"
+            >
+              Game Stats
+              <i
+                className="material-icons"
+                style={{
+                  position: "absolute",
+                  top: "12px",
+                  marginLeft: "20px",
+                  marginRight: "20px",
+                }}
               >
-                Game Stats
-                <i
-                  className="material-icons"
-                  style={{
-                    position: "absolute",
-                    top: "12px",
-                    marginLeft: "20px",
-                    marginRight: "20px",
-                  }}
-                >
-                  pie_chart
-                </i>
-              </Link>
-            </li>
-          </ul>
-        </div>
+                pie_chart
+              </i>
+            </Link>
+          </li>
+        </ul>
       </div>
-    </FocusTrap>
+    </div>
   );
 }
 

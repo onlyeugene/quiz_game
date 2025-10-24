@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "../Home/home.css";
 import Header from "../Header";
-import Footer from "../Footer";
-import HomeSection from "../HomeSection";
+// import HomeSection from "../HomeSection";
 import Sidebar from "../Sidebar";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -24,8 +23,7 @@ const Home = () => {
             onClose={() => updateSidebarIsOpen(false)}
             isOpen={sidebarIsOpen}
           />
-          <HomeSection />
-          <Footer />
+          {/* <HomeSection /> */}
         </main>
       </HelmetProvider>
     </>
