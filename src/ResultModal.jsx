@@ -20,6 +20,7 @@ import {
 } from "react-loader-spinner";
 import "./resultmodal.css";
 import { Redirect } from "react-router-dom";
+import { ClimbingBoxLoader } from "react-spinners";
 
 const Create = ({
   result,
@@ -28,7 +29,7 @@ const Create = ({
   updatePlayerAnswer,
   updateCurrentPage,
   updateResultModalStatus,
-//   resultModalStatus,
+  //   resultModalStatus,
 }) => {
   const [backHome, updateBackHome] = useState(false);
   const [loadingLoader, updateLoadingLoader] = useState(true);
@@ -69,9 +70,9 @@ const Create = ({
   return ReactDOM.createPortal(
     <div className="block__modalContainer">
       {loadingLoader ? (
-        <Oval
+        <ClimbingBoxLoader
           type="Oval"
-          color="#D56F85"
+          color="#ffa500"
           height={100}
           width={100}
           timeout={2000}

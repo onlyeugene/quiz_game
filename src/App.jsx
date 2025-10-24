@@ -3,11 +3,8 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import Home from './Home/Home';
 import QuizPage from './QuizPage';
-// import Home from "./Home/Home";
-// import Quiz from "./QuizPage";
-// import About from './About';
-// import Stats from './Stats';
-// import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Stats from './Stats';
+
 
 function App() {
   return (
@@ -16,7 +13,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/quiz" component={QuizPage} /> 
         {/* <Route path="/about" component={About} /> */}
-        {/* <Route path="/stats" component={Stats} /> */}
+        <Route path="/stats" component={Stats} />
       </Router>
     </div>
   );
