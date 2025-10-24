@@ -1,0 +1,31 @@
+import React from 'react';
+import type { StyleObject } from './commonTypes';
+export declare function makePathCommands(cx: number, cy: number, startAngle: number, lengthAngle: number, radius: number): string;
+declare type Props = {
+    cx: number;
+    cy: number;
+    fill?: string;
+    lengthAngle: number;
+    lineWidth: number;
+    key?: number | string;
+    onBlur?: (event: React.FocusEvent) => void;
+    onClick?: (event: React.MouseEvent) => void;
+    onFocus?: (event: React.FocusEvent) => void;
+    onKeyDown?: (event: React.KeyboardEvent) => void;
+    onMouseOut?: (event: React.MouseEvent) => void;
+    onMouseOver?: (event: React.MouseEvent) => void;
+    radius: number;
+    reveal?: number;
+    shift?: number;
+    startAngle: number;
+    stroke?: string;
+    strokeLinecap?: 'butt' | 'round' | 'square' | 'inherit';
+    style?: StyleObject;
+    tabIndex?: number;
+    title?: string | number;
+};
+declare function ReactMinimalPieChartPath({ cx, cy, lengthAngle, lineWidth, radius, shift, reveal, startAngle, title, ...props }: Props): JSX.Element;
+declare namespace ReactMinimalPieChartPath {
+    var displayName: string;
+}
+export default ReactMinimalPieChartPath;
