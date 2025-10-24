@@ -1,0 +1,21 @@
+import type { Props as ChartProps } from './Chart';
+export declare function degreesToRadians(degrees: number): number;
+export declare function evaluateLabelTextAnchor({ labelPosition, lineWidth, labelHorizontalShift, }: {
+    labelPosition: number;
+    lineWidth: number;
+    labelHorizontalShift: number;
+}): "end" | "start" | "middle";
+export declare function valueBetween(value: number, min: number, max: number): number;
+export declare function extractPercentage(value: number, percentage: number): number;
+export declare function extractAbsoluteCoordinates(props: ChartProps): {
+    cx: number;
+    cy: number;
+    radius: number;
+};
+export declare function bisectorAngle(startAngle: number, lengthAngle: number): number;
+export declare function shiftVectorAlongAngle(angle: number, distance: number): {
+    dx: number;
+    dy: number;
+};
+export declare function isNumber(value: unknown): value is number;
+export declare function functionProp<Prop, Payload>(prop: Prop, payload?: Payload, index?: number): Prop extends Function ? ReturnType<Prop> : Prop;

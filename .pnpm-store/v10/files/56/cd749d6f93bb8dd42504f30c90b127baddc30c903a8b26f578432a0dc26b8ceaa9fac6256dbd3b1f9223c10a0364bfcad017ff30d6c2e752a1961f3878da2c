@@ -1,0 +1,3 @@
+import type { ExtendedData } from '../commonTypes';
+import type { Props as ChartProps } from './Chart';
+export default function extendData({ data, lengthAngle: totalAngle, totalValue, paddingAngle, }: ChartProps): ExtendedData;
