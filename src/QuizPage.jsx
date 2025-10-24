@@ -1,34 +1,33 @@
 import React, { useState } from "react";
-import "../Home/home.css";
-import Header from "../Header";
-
-import Sidebar from "../Sidebar";
+import "./quizpage.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import HomeSection from "../HomeSection";
+import Header from "./Header";
+import QuizSection from "./QuizSection";
+import Sidebar from "./Sidebar";
 
-const Home = () => {
+const QuizPage = ({ location }) => {
   const [sidebarIsOpen, updateSidebarIsOpen] = useState(false);
 
   return (
     <>
       <HelmetProvider>
         <Helmet>
-          <title>Quiz - Home</title>
+          <title>Quiz - Category: {location.state.category}</title>
         </Helmet>
         <main className="block">
           <Header
-            page="home"
+            page="quiz"
             onClickMenuButton={() => updateSidebarIsOpen(true)}
           />
           <Sidebar
             onClose={() => updateSidebarIsOpen(false)}
             isOpen={sidebarIsOpen}
           />
-          <HomeSection />
+          <QuizSection category={location.state.category} />
         </main>
       </HelmetProvider>
     </>
   );
 };
 
-export default Home;
+export default QuizPage;
