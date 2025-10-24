@@ -1,16 +1,57 @@
-# React + Vite
+# Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based quiz application. Users can select different categories, answer questions, and view their statistics.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Axios (for API calls)
+- RxJS (for state management)
+- ApexCharts & React-ApexCharts (for data visualization)
+- React Router DOM (for routing)
+- React Icons (for icons)
+- React Spinners (for loaders)
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To run this project locally, follow these steps:
 
-## Expanding the ESLint configuration
+1.  **Clone the repository:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    ```bash
+    git clone <repository-url>
+    cd quiz
+    ```
+
+2.  **Install dependencies using pnpm:**
+
+    ```bash
+    pnpm install
+    ```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+- `pnpm dev`
+
+  Runs the app in development mode.
+  Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+  The page will reload when you make changes.
+
+- `pnpm build`
+
+  Builds the app for production to the `dist` folder.
+  It correctly bundles React in production mode and optimizes the build for the best performance.
+
+  The build is minified and the filenames include the hashes.
+
+- `pnpm lint`
+
+  Lints the project files.
+
+- `pnpm preview`
+
+  Serves the production build locally.
