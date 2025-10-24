@@ -79,9 +79,7 @@ const Create = ({
       ) : (
         <div
           className="block__modalContainer__dialogBox"
-          role="dialog" /* 
-                             aria-label="Quiz result" 
-                             aria-describedby="dialog1Desc" */
+          role="dialog"
           id="quiz-result"
         >
           <div
